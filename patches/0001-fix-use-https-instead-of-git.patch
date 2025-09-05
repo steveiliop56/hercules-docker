@@ -1,0 +1,25 @@
+From b8aef86ad748934e2b96c985f5db2b1a4901b6ee Mon Sep 17 00:00:00 2001
+From: Stavros <steveiliop56@gmail.com>
+Date: Fri, 5 Sep 2025 01:58:18 +0300
+Subject: [PATCH] fix: use https instead of git
+
+---
+ CMake/Herc60_CreateTargets.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMake/Herc60_CreateTargets.cmake b/CMake/Herc60_CreateTargets.cmake
+index 095b4ee8..0c519f50 100644
+--- a/CMake/Herc60_CreateTargets.cmake
++++ b/CMake/Herc60_CreateTargets.cmake
+@@ -409,7 +409,7 @@ endif( )
+ 
+ externalproject_add( html
+         SOURCE_DIR        ${PROJECT_BINARY_DIR}/html
+-        GIT_REPOSITORY    "git://github.com/hercules-390/html"
++        GIT_REPOSITORY    "https://github.com/hercules-390/html"
+         GIT_TAG           "gh-pages"
+         CONFIGURE_COMMAND ""        # No Configure
+         BUILD_COMMAND ""            # No build
+-- 
+2.50.1
+
