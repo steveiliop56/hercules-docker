@@ -41,7 +41,7 @@ FROM debian:trixie AS runner
 # Dependencies
 RUN DEBIAN_FRONTEND=noninteractive apt update
 
-RUN DEBIAN_FRONTEND=noninteractive apt install -y cmake
+RUN DEBIAN_FRONTEND=noninteractive apt install -y cmake regina-rexx telnet
 
 # Setup
 COPY --from=builder /hyperion /hyperion
